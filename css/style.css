@@ -35,8 +35,12 @@ body {
 .main {
   background-color: blue;
   padding: 30px 15px;
-  overflow: hidden;
   min-height: 450px;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 .group {
   float: left;
