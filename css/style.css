@@ -1,7 +1,7 @@
 @charset "utf-8";
 @import url(./normalize.css);
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
-/* @impo0rt url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css); */
+/* @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css); */
 @import url(./fontello.css);
 
 *, *::before, *::after {
@@ -13,10 +13,9 @@ html {
 body {
   font-size: 1.4rem;
   color: #181818;
-  background-color: #fff;
+  background: url(./images/bg_flower.png) no-repeat 50% 0 scroll, #fff linear-gradient(to bottom, #ccc 0%, #fff 70%, #fff 100%);
   font-family: 'Spoqa Han Sans';
   font-weight: 400;
-  overflow: hidden;
 }
 /* 숨긴 콘텐츠 */
 .a11y-hidden {
@@ -34,7 +33,6 @@ a {
 }
 /* 레이아웃 */
 .container {
-  background-color: #ccc;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -171,9 +169,55 @@ a {
 .sub-menu6 {
   display: none;
 }
+/* 비주얼 */
+@keyframes textAni {
+  0% {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0);
+    transform: translate(0, 0);
+  }
+  100% {
+    font-size: 24px;
+    color: rgba(0, 0, 0, 1);
+    transform: translate(400px, 75px);
+  }
+}
+@keyframes bgAni {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .visual {
-  background-color: lime;
   height: 120px;
+  position: relative;
+}
+.visual::before, .visual::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  animation: bgAni 2s ease-in-out infinite alternate;
+}
+.visual::before {
+  background-image: url(./images/ani_flower_01.png), url(./images/ani_flower_02.png);
+  background-position: 0 -10px, 670px 0;
+}
+.visual::after {
+  background-image: url(./images/ani_flower_03.png), url(./images/ani_flower_04.png);
+  background-position: 300px 0px, 800px 20px;
+  animation-delay: 1s;
+}
+.visual-text {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 2.4rem;
+  animation: textAni 500ms ease-in-out forwards;
+  width: 500px;
 }
 /* 메인 콘텐츠 */
 .main {
