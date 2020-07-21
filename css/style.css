@@ -33,18 +33,20 @@ a {
 }
 /* 레이아웃 */
 .container {
-  display: flex;
+  /* display: flex;
   flex-flow: column nowrap;
-  align-items: center;
+  align-items: center; */
 }
 .header, .visual, .main, .slogan, .footer {
   width: 940px;
+  margin-left: auto;
+  margin-right: auto;
 }
 /* 헤더 */
 .header {
   background-color: #fff;
   border-radius: 0 0 15px 15px;
-  padding: 0 30px;
+  padding: 1px 30px;
   position: relative;
 }
 /* 로고 */
@@ -228,10 +230,12 @@ a {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: flex-start;
+  background-color: #fff;
+  border-radius: 20px;
+
 }
 .group1 {
   width: 250px;
-  background-color: pink;
 }
 .group2 {
   background-color: lightgreen;
@@ -332,7 +336,6 @@ a {
 }
 /* 유효성 검사 배너 링크 */
 .validation-list {
-  background-color: yellow;
   margin: 25px 0 0 0;
   padding-left: 0;
   list-style: none;
@@ -351,6 +354,65 @@ a {
 .validation-list li a:hover {
   color: #f00;
 }
+/* 웹 관련 용어 */
+.term {
+  background: #ccc linear-gradient(180deg, #ccc, #eee);
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 20px;
+}
+.term-heading {
+  margin: 0;
+  font-size: 1.6rem;
+  /* font-weight: 700; */
+}
+.term-list {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.term-list > div {
+  margin-top: 10px;
+}
+.odd::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.term-list-subject {
+  color: #296897;
+}
+.term-list-subject, .term-list-brief {
+  width: 145px;
+  float: right;
+}
+.term-list-thumbnail {
+  margin-left: 0;
+  float: left;
+}
+.term-list-brief {
+  margin-left: 0;
+  margin-top: 5px;
+}
+
+/* --------------------------------- */
+
+.even::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.even .term-list-subject {
+  float: left;
+}
+.even .term-list-thumbnail {
+  float: right;
+}
+.even .term-list-brief {
+  float: left;
+}
+
+/* --------------------------------- */
 
 
 
