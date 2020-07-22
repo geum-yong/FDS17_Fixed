@@ -461,6 +461,135 @@ a {
 }
 
 
+
+
+
+
+
+
+
+
+
+.board {
+  margin-top: 15px;
+  position: relative;
+}
+.notice-heading {
+  margin: 0;
+  padding: 10px;
+  background: #ccc linear-gradient(180deg, #ccc, #fff);
+  display: inline-block;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-size: 1.6rem;
+  border: 1px solid #aaa;
+}
+.notice-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.notice-list li {
+  margin: 15px 0;
+}
+.notice-list li::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.notice-list li a {
+  display: block;
+  float: left;
+  width: 300px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.notice-list li a::before {
+  content: "\f192";
+  font-family: 'fontello';
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.notice-list li time {
+  float: right;
+}
+.notice-more {
+  position: absolute;
+  top: 15px;
+  right: 0;
+}
+
+
+.pds {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.pds-heading {
+  position: absolute;
+  left: 80.89px;
+  margin: 0;
+  padding: 10px;
+  background: #ccc linear-gradient(180deg, #ccc, #fff);
+  display: inline-block;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-size: 1.6rem;
+  border: 1px solid #aaa;
+}
+.pds-list {
+  list-style: none;
+  margin: 0;
+  padding: 39px 0 0 0;
+}
+.pds-list li {
+  margin: 15px 0;
+}
+.pds-list li::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.pds-list li a {
+  display: block;
+  float: left;
+  width: 300px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.pds-list li a::before {
+  content: "\f192";
+  font-family: 'fontello';
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.pds-list li time {
+  float: right;
+}
+.pds-more {
+  position: absolute;
+  top: 15px;
+  right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 슬로건 */
 .slogan {
   background-color: orange;
