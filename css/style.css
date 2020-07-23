@@ -136,6 +136,9 @@ a {
   padding: 8px 0;
   margin-right: 10px;
 }
+.menu-act .sub-menu {
+  display: block;
+}
 .sub-menu a::before {
   content: '\f192';
   font-family: 'fontello';
@@ -154,7 +157,7 @@ a {
   right: 0;
 }
 .sub-menu1 {
-  display: block;
+  display: none;
 }
 .sub-menu2 {
   display: none;
@@ -458,256 +461,25 @@ a {
   height: 24px;
   padding: 0 10px;
 }
-
-
-
-
-
-
-/* .board {
-  margin-top: 15px;
-  position: relative;
-  height: 190px;
-}
-.board::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-.notice {
-  float: left;
-}
-.notice .notice-heading {
-  margin: 0;
-}
-.notice .notice-heading a {
-  display: block;
-  font-size: 1.5rem;
-  padding: 5px 10px;
-  border: 1px solid #aaa;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  background: #ccc linear-gradient(180deg, #ccc, #fff);
-}
-.notice .notice-list {
-  margin: 0;
-  list-style: none;
-  padding-left: 0;
-  position: absolute;
-  top: 30px;
-  left: 0;
-  width: 100%;
-}
-.notice .notice-list li {
-  margin: 10px 0;
-}
-.notice .notice-list li::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-.notice .notice-list li a {
-  float: left;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 300px;
-}
-.notice .notice-list li a::before {
-  content: "\f192";
-  font-family: 'fontello';
-  display: inline-block;
-  margin-right: 5px;
-}
-.notice .notice-list li time {
-  float: right;
-}
-.notice > a {
-  position: absolute;
-  top: 5px;
-  right: 0;
-}
-
-.pds {
-  margin: 0;
-  float: left;
-}
-.pds .pds-heading {
-  margin: 0;
-}
-.pds .pds-heading a {
-  display: block;
-  font-size: 1.5rem;
-  padding: 5px 10px;
-  border: 1px solid #aaa;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  background: #ccc linear-gradient(180deg, #ccc, #fff);
-}
-.pds .pds-list {
-  margin: 0;
-  list-style: none;
-  padding-left: 0;
-  position: absolute;
-  top: 30px;
-  left: 0;
-  width: 100%;
-  display: none;
-}
-.pds .pds-list li {
-  margin: 10px 0;
-}
-.pds .pds-list li::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-.pds .pds-list li a {
-  float: left;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 300px;
-}
-.pds .pds-list li a::before {
-  content: "\f192";
-  font-family: 'fontello';
-  display: inline-block;
-  margin-right: 5px;
-}
-.pds .pds-list li time {
-  float: right;
-}
-.pds > a {
-  position: absolute;
-  top: 5px;
-  right: 0;
-}
-.tab-act .notice-heading a, .tab-act .pds-heading a {
-  border: 1px solid red;
-  border-bottom: 0;
-  color: red;
-  background: transparent;
-}
-
-.notice-heading:hover + .notice-list {
-  display: block;
-}
-.notice-heading:hover + .pds-list {
-  display: none;
-}
-.pds-heading:hover + .notice-list {
-  display: none;
-}
-.pds-heading:hover + .pds-list {
-  display: block;
-} */
-
-
-/* .board {
-  position: relative;
-  margin-top: 15px;
-}
-.notice .notice-heading,
-.pds .pds-heading {
-  margin: 0;
-}
-.notice .notice-heading {
-  display: inline-block;
-}
-.notice .notice-heading a,
-.pds .pds-heading a {
-  display: inline-block;
-  font-size: 1.5rem;
-  padding: 5px 10px;
-  border: 1px solid #aaa;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  background: #ccc linear-gradient(180deg, #ccc, #fff);
-}
-.pds .pds-heading a {
-  position: absolute;
-  top: 0;
-  left: 77px;
-}
-.notice .notice-list,
-.pds .pds-list {
-  list-style: none;
-  padding-left: 0;
-  margin: 15px 0 0 0;
-}
-.notice .notice-list li,
-.pds .pds-list li {
-  margin: 10px 0 0 0;
-}
-.notice .notice-list li::after,
-.pds .pds-list li::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-.notice .notice-list li a,
-.pds .pds-list li a {
-  float: left;
-  width: 290px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 300px;
-}
-.notice .notice-list li a::before,
-.pds .pds-list li a::before {
-  content: "\f192";
-  font-family: "fontello";
-  margin-right: 5px;
-}
-.notice .notice-list li time,
-.pds .pds-list li time {
-  float: right;
-}
-.notice > a,
-.pds > a {
-  position: absolute;
-  top: 7px;
-  right: 0;
-}
-.pds-list {
-  display: none;
-}
-.notice-heading:hover + .notice-list  {
-  display: block;
-}
-.notice-heading:hover + .pds-list  {
-  display: none;
-}
-
-.pds-heading:hover + .pds-list  {
-  display: block;
-}
-.pds-heading:hover + .notice-list  {
-  display: none;
-}
-.tab-act .notice-heading a, .tab-act .pds-heading a {
-  border: 1px solid red;
-  border-bottom: 0;
-  color: red;
-  background: transparent;
-} */
-
 /* 공지사항 및 자료실 */
 .board {
-  background-color: yellow;
   margin-top: 20px;
   position: relative;
-  min-height: 180px;
+  padding-top: 45px;
 }
 .notice-heading,
 .pds-heading {
-  background-color: pink;
-  float: left;
   margin: 0;
   font-size: 1.4rem;
   font-weight: 400;
+  position: absolute;
+  top: 0;
+}
+.notice-heading {
+  left: 0;
+}
+.pds-heading {
+  left: 73px;
 }
 .tab {
   color: #666;
@@ -736,18 +508,13 @@ a {
 }
 .notice-list,
 .pds-list {
-  background-color: silver;
   list-style: none;
   margin: 0;
   padding-left: 0;
-  position: absolute;
-  top: 45px;
-  left: 0;
-  width: 100%;
+  min-height: 130px;
 }
 .notice-list li,
 .pds-list li {
-  background-color: orange;
   margin-bottom: 10px;
 }
 .notice-list li::after,
@@ -758,7 +525,6 @@ a {
 }
 .notice-list a,
 .pds-list a {
-  background-color: skyblue;
   float: left;
   width: 300px;
   text-overflow: ellipsis;
@@ -773,7 +539,6 @@ a {
 }
 .notice-list time,
 .pds-list time {
-  background-color: violet;
   float: right;
 }
 .notice-more,
