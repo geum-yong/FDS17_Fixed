@@ -238,7 +238,6 @@ a {
   width: 250px;
 }
 .group2 {
-  background-color: lightgreen;
   width: 380px;
 }
 .group3 {
@@ -465,125 +464,328 @@ a {
 
 
 
-
-
-
-
-
-.board {
+/* .board {
   margin-top: 15px;
   position: relative;
+  height: 190px;
 }
-.notice-heading {
-  margin: 0;
-  padding: 10px;
-  background: #ccc linear-gradient(180deg, #ccc, #fff);
-  display: inline-block;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  font-size: 1.6rem;
-  border: 1px solid #aaa;
-}
-.notice-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.notice-list li {
-  margin: 15px 0;
-}
-.notice-list li::after {
+.board::after {
   content: "";
   display: block;
   clear: both;
 }
-.notice-list li a {
-  display: block;
+.notice {
   float: left;
-  width: 300px;
+}
+.notice .notice-heading {
+  margin: 0;
+}
+.notice .notice-heading a {
+  display: block;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  border: 1px solid #aaa;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: #ccc linear-gradient(180deg, #ccc, #fff);
+}
+.notice .notice-list {
+  margin: 0;
+  list-style: none;
+  padding-left: 0;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+}
+.notice .notice-list li {
+  margin: 10px 0;
+}
+.notice .notice-list li::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.notice .notice-list li a {
+  float: left;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  width: 300px;
 }
-.notice-list li a::before {
+.notice .notice-list li a::before {
   content: "\f192";
   font-family: 'fontello';
+  display: inline-block;
   margin-right: 5px;
-  margin-left: 5px;
 }
-.notice-list li time {
+.notice .notice-list li time {
   float: right;
 }
-.notice-more {
+.notice > a {
   position: absolute;
-  top: 15px;
+  top: 5px;
   right: 0;
 }
 
-
 .pds {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.pds-heading {
-  position: absolute;
-  left: 80.89px;
   margin: 0;
-  padding: 10px;
-  background: #ccc linear-gradient(180deg, #ccc, #fff);
-  display: inline-block;
+  float: left;
+}
+.pds .pds-heading {
+  margin: 0;
+}
+.pds .pds-heading a {
+  display: block;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  border: 1px solid #aaa;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  font-size: 1.6rem;
+  background: #ccc linear-gradient(180deg, #ccc, #fff);
+}
+.pds .pds-list {
+  margin: 0;
+  list-style: none;
+  padding-left: 0;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  display: none;
+}
+.pds .pds-list li {
+  margin: 10px 0;
+}
+.pds .pds-list li::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.pds .pds-list li a {
+  float: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 300px;
+}
+.pds .pds-list li a::before {
+  content: "\f192";
+  font-family: 'fontello';
+  display: inline-block;
+  margin-right: 5px;
+}
+.pds .pds-list li time {
+  float: right;
+}
+.pds > a {
+  position: absolute;
+  top: 5px;
+  right: 0;
+}
+.tab-act .notice-heading a, .tab-act .pds-heading a {
+  border: 1px solid red;
+  border-bottom: 0;
+  color: red;
+  background: transparent;
+}
+
+.notice-heading:hover + .notice-list {
+  display: block;
+}
+.notice-heading:hover + .pds-list {
+  display: none;
+}
+.pds-heading:hover + .notice-list {
+  display: none;
+}
+.pds-heading:hover + .pds-list {
+  display: block;
+} */
+
+
+/* .board {
+  position: relative;
+  margin-top: 15px;
+}
+.notice .notice-heading,
+.pds .pds-heading {
+  margin: 0;
+}
+.notice .notice-heading {
+  display: inline-block;
+}
+.notice .notice-heading a,
+.pds .pds-heading a {
+  display: inline-block;
+  font-size: 1.5rem;
+  padding: 5px 10px;
   border: 1px solid #aaa;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: #ccc linear-gradient(180deg, #ccc, #fff);
+}
+.pds .pds-heading a {
+  position: absolute;
+  top: 0;
+  left: 77px;
+}
+.notice .notice-list,
+.pds .pds-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 15px 0 0 0;
+}
+.notice .notice-list li,
+.pds .pds-list li {
+  margin: 10px 0 0 0;
+}
+.notice .notice-list li::after,
+.pds .pds-list li::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.notice .notice-list li a,
+.pds .pds-list li a {
+  float: left;
+  width: 290px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 300px;
+}
+.notice .notice-list li a::before,
+.pds .pds-list li a::before {
+  content: "\f192";
+  font-family: "fontello";
+  margin-right: 5px;
+}
+.notice .notice-list li time,
+.pds .pds-list li time {
+  float: right;
+}
+.notice > a,
+.pds > a {
+  position: absolute;
+  top: 7px;
+  right: 0;
 }
 .pds-list {
+  display: none;
+}
+.notice-heading:hover + .notice-list  {
+  display: block;
+}
+.notice-heading:hover + .pds-list  {
+  display: none;
+}
+
+.pds-heading:hover + .pds-list  {
+  display: block;
+}
+.pds-heading:hover + .notice-list  {
+  display: none;
+}
+.tab-act .notice-heading a, .tab-act .pds-heading a {
+  border: 1px solid red;
+  border-bottom: 0;
+  color: red;
+  background: transparent;
+} */
+
+/* 공지사항 및 자료실 */
+.board {
+  background-color: yellow;
+  margin-top: 20px;
+  position: relative;
+  min-height: 180px;
+}
+.notice-heading,
+.pds-heading {
+  background-color: pink;
+  float: left;
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.tab {
+  color: #666;
+  border: 1px solid #aaa;
+  border-radius: 5px 5px 0 0;
+  padding: 5px 10px;
+  display: block;
+  background: #ccc linear-gradient(180deg, #ccc, #eee);
+}
+.tab-act .tab {
+  color: #db5629;
+  border-color: #db5629 #db5629 #fff #db5629;
+  background: #fff;
+}
+.notice-list,
+.pds-list,
+.notice-more,
+.pds-more {
+  display: none;
+}
+.tab-act .notice-list,
+.tab-act .pds-list,
+.tab-act .notice-more,
+.tab-act .pds-more {
+  display: block;
+}
+.notice-list,
+.pds-list {
+  background-color: silver;
   list-style: none;
   margin: 0;
-  padding: 39px 0 0 0;
+  padding-left: 0;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  width: 100%;
 }
+.notice-list li,
 .pds-list li {
-  margin: 15px 0;
+  background-color: orange;
+  margin-bottom: 10px;
 }
+.notice-list li::after,
 .pds-list li::after {
   content: "";
   display: block;
   clear: both;
 }
-.pds-list li a {
-  display: block;
+.notice-list a,
+.pds-list a {
+  background-color: skyblue;
   float: left;
   width: 300px;
   text-overflow: ellipsis;
-  white-space: nowrap;
   overflow: hidden;
+  white-space: nowrap;
 }
-.pds-list li a::before {
+.notice-list a::before,
+.pds-list a::before {
   content: "\f192";
-  font-family: 'fontello';
-  margin-right: 5px;
-  margin-left: 5px;
+  font-family: "fontello";
+  display: inline-block;
 }
-.pds-list li time {
+.notice-list time,
+.pds-list time {
+  background-color: violet;
   float: right;
 }
+.notice-more,
 .pds-more {
   position: absolute;
-  top: 15px;
-  right: 0;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
 }
-
-
-
-
-
-
-
-
-
-
-
+.icon-plus::before {
+  color: hsla(110, 70%, 50%, 1);
+}
 
 
 
