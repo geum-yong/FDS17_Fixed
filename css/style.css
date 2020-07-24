@@ -26,6 +26,7 @@ body {
   margin: -1px;
   clip-path: polygon(0 0, 0 0, 0 0);
   clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
 }
 /* 링크 스타일 */
 a {
