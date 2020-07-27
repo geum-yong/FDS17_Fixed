@@ -1,0 +1,46 @@
+@import url("//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
+
+* {
+  font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', sans-serif;
+}
+body {
+  margin: 0;
+}
+/* 그리드 컨테이너 */
+.container {
+  background-color: silver;
+  height: 100vh;
+  display: grid;
+  grid-template: repeat(5, 100px) / repeat(4, 1fr);
+  gap: 20px 10px;
+  grid-template-areas: 
+    "header header header ."
+    ". slogan slogan slogan"
+    "main main main visual"
+    "main main main sidebar"
+    "footer footer footer sidebar"
+}
+.header {
+  background-color: yellow;
+  grid-area: header;
+}
+.visual {
+  background-color: pink;
+  grid-area: visual;
+}
+.main {
+  background-color: aqua;
+  grid-area: main;
+}
+.sidebar {
+  background-color: lightgreen;
+  grid-area: sidebar;
+}
+.slogan {
+  background-color: orange;
+  grid-area: slogan;
+}
+.footer {
+  background-color: brown;
+  grid-area: footer;
+}
