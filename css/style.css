@@ -771,6 +771,7 @@ a {
 }
 .slogan-brief {
   color: #a09784;
+  margin: 0;
   font-size: 1.3rem;
 }
 .slogan-brief q {
@@ -778,8 +779,7 @@ a {
 }
 .slogan-brief q::before {
   font-size: 3rem;
-  position: relative;
-  top: 10px;
+  vertical-align: middle;
   margin-right: 5px;
 }
 .slogan-brief q::after {
